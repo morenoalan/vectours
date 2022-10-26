@@ -27,13 +27,17 @@ h1 {
     font-weight:bolder;
     letter-spacing: 2px;
     font-size: 60px;
+    margin-bottom: -10px;
 }
-p {
+p,
+label {
     font-family: 'Readex Pro', sans-serif;
     font-weight: 300;
+    font-size: 14px;
+    color: white;
 }
 header > p {
-    color: white;
+    margin: 0;
 }
 main {
     display: flex;
@@ -52,8 +56,11 @@ ul {
 li {
     margin: 0 10px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 60px;
+    white-space: nowrap;
 }
 .icons > svg {
     fill: white;
@@ -61,34 +68,74 @@ li {
     width: 60px;
     cursor: pointer;
 }
+.icons label {
+    visibility: hidden;
+}
+.icons:hover label {
+    visibility: visible;
+}
+footer {
+    display: flex;
+    background-color: transparent;
+    position: fixed;
+    height: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+}
+footer > p {
+    position: relative;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    color: white;
+}
+footer > p > a {
+    text-decoration: none;
+    color: white;
+}
+#copyleft {
+    display: inline-block;
+    transform: rotate(180deg);
+}
+
+.display-none {
+    display: none;
+}
 
 @media (max-width:799px) {
     ul{
-        width: 720px;
+        max-width: 720px;
     }
 }
 @media (max-width:719px) {
     ul{
-        width: 560px;
+        max-width: 560px;
     }
 }
 @media (max-width:559px) {
     ul{
-        width: 480px;
+        max-width: 480px;
     }
 }
 @media (max-width:479px) {
     ul{
-        width: 400px;
+        max-width: 400px;
     }
 }
 @media (max-width:399px) {
     ul{
-        width: 320px;
+        max-width: 320px;
     }
 }
 @media (max-width:319px) {
     ul{
-        width: 240px;
+        max-width: 240px;
     }
 }
